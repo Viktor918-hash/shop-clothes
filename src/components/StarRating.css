@@ -1,0 +1,14 @@
+/* Ставить зірочки і оцінку цифрою на один рівень  */
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.rating:first-child{
+    gap:0px;
+}
+
+.rating span {
+    line-height: 1; 
+}

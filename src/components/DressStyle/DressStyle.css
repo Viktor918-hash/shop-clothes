@@ -1,0 +1,65 @@
+.dress-style{
+    display: flex;
+    overflow: clip;
+    min-height: 100%;
+    flex-direction: column;
+}
+.dress-style__container{
+    margin-bottom: 50px;
+}
+.color{
+    background-color: #f0f0f0;
+    border-radius: 24px;
+}
+.dress-style__title{
+    font-family: 'Integral CF', sans-serif;
+    font-weight: 700;
+    font-size: clamp(32px, 3.5vw, 48px);
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 70px;
+}
+
+.dress-style__grid{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 70px 64px;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    
+}
+
+.mobile{
+    display: none;
+}
+
+.dress-style__item{
+    
+}
+
+.dress-style__item img:hover{
+    transform: scale(1.04);
+    transition: all 0.3s ease;
+}
+
+/* __________________________________________________________________ */
+
+/* ХОВАЮ ФОТО БІЛЬШІ ВКЛЮЧАЮТЬСЯ ДЛЯ МОБІЛОК */
+
+@media(width<=450px){
+    .dress-style__title{
+        padding: 40px 20px 0 20px;
+
+    }
+    .dress-style__grid{
+        padding: 28px 24px;
+        gap:16px;
+    }
+    .dress-style__item img:first-child {
+    display: none; 
+    }
+    .mobile{
+        display: flex; 
+    }
+}

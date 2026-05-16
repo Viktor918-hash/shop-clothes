@@ -1,0 +1,280 @@
+.footer {
+  background: linear-gradient(to bottom, transparent 80px, #F0F0F0 80px);
+  padding-top: 0;
+  margin-top: 80px;
+}
+
+.footer__container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 clamp(15px, 3.5vw, 90px);
+}
+
+/* ✅ NEWSLETTER СЕКЦІЯ */
+.footer__newsletter {
+  background-color: #000;
+  border-radius: 20px;
+  padding: clamp(32px, 5vw, 36px) clamp(24px, 5vw, 64px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin-top: -80px; 
+  margin-bottom: 50px;
+}
+
+.newsletter__title {
+  font-family: 'Integral CF', sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 40px);
+  color: #fff;
+  line-height: 1.2;
+  max-width: 550px;
+}
+
+.newsletter__form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 349px;
+}
+
+.newsletter__input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border-radius: 62px;
+  padding: 12px 16px;
+}
+
+.newsletter__input {
+  flex: 1;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 16px;
+  color: #000;
+}
+
+.newsletter__input::placeholder {
+  color: #00000066;
+}
+
+.newsletter__button {
+  width: 100%;
+  padding: 12px 16px;
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 62px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.newsletter__button:hover {
+  opacity: 0.8;
+}
+
+/* ✅ ОСНОВНИЙ КОНТЕНТ */
+.footer__content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: clamp(60px, 8vw, 113px);
+  padding-bottom: 50px;
+  border-bottom: 1px solid #0000001a;
+}
+
+/* Лого та опис */
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.footer__logo {
+  font-family: 'Integral CF', sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 3vw, 33px);
+  color: #000;
+  text-transform: uppercase;
+}
+
+.footer__description {
+  font-size: 14px;
+  color: #00000099;
+  line-height: 1.6;
+  max-width: 248px;
+}
+
+.footer__social {
+  display: flex;
+  gap: 12px;
+}
+
+.footer__social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.footer__social a:hover {
+  transform: scale(1.1);
+}
+
+/* ✅ КОЛОНКИ З ПОСИЛАННЯМИ */
+.footer__links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(20px, 4vw, 40px);
+}
+
+.footer__column-title {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  margin-bottom: 26px;
+  color: #000;
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer__list li {
+  list-style: none;
+}
+
+.footer__list a {
+  font-size: 16px;
+  color: #00000099;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer__list a:hover {
+  color: #000;
+}
+
+/* ✅ НИЖНЯ ЧАСТИНА */
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+}
+
+.footer__copyright {
+  font-size: 14px;
+  color: #00000099;
+}
+
+.footer__payment {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.payment__badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ АДАПТИВ ПІД ПЛАНШЕТИ */
+@media (max-width: 991px) {
+  .footer__content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer__links {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .footer__newsletter {
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .newsletter__title {
+    max-width: 100%;
+  }
+
+  .newsletter__form {
+    max-width: 100%;
+  }
+}
+
+/* ✅ АДАПТИВ ПІД МОБІЛЬНІ */
+@media (max-width: 640px) {
+  .footer {
+    margin-top: 60px;
+  }
+
+  .footer__newsletter {
+    margin-top: -60px;
+    padding: 32px 24px;
+  }
+
+  .newsletter__title {
+    font-size: 24px;
+  }
+
+  .footer__links {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer__payment {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer__brand {
+    gap: 20px;
+  }
+
+  .footer__description {
+    max-width: 100%;
+  }
+
+  .footer__social {
+    justify-content: flex-start;
+  }
+}
+
+/* ✅ ДУЖЕ МАЛІ ЕКРАНИ */
+@media (max-width: 400px) {
+  .newsletter__title {
+    font-size: 20px;
+  }
+
+  .newsletter__input,
+  .newsletter__button {
+    font-size: 14px;
+  }
+
+  .footer__payment {
+    gap: 8px;
+  }
+
+  .payment__badge svg {
+    width: 40px;
+    height: 26px;
+  }
+}

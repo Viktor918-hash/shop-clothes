@@ -1,0 +1,93 @@
+
+.product-section{
+    display: flex;
+    align-items: stretch;
+    overflow: visible;
+    padding-inline: clamp(15px, 4.5vw, 90px);
+}
+
+/* + означає — застосуй стиль до .product-section який іде одразу після іншого .product-section. */
+.product-section + .product-section .product-section__title {
+    border-top: 1px solid #0000001a; /* ← лінія між секціями */
+    padding-top: clamp(35px, 4.5vw, 55px);
+}
+
+.product-section__container{
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+width: 100%;
+padding-inline: 0; /* ← скидає глобальний padding */
+}
+
+.product-section__title{
+    font-family: 'Integral CF', sans-serif;
+    font-weight: 700;
+    font-size: clamp( 32px, 4vw, 48px );
+    text-align: center; 
+    justify-content: center; 
+    margin-bottom: clamp(30px, 4.5vw, 55px);
+    margin-top: clamp(40px, 4.5vw, 72px);
+}
+
+
+.product-section__grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(16px, 2vw, 20px);
+}
+
+.product-section__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: clamp(24px, 2.8vw, 36px)
+}
+
+.view-all{
+    display: inline-block;
+    background-color: #fff;
+    padding: 16px 76px;
+    border-radius: 100px;
+    border: 1px solid #f0f0f0;
+    font-size: clamp(14px, 1vw, 16px);
+    text-decoration: none;
+    margin-bottom: clamp(40px, 4.5vw, 80px);
+    transition: all 0.3s ease;
+}
+
+.view-all:hover{
+    background-color: black;
+    color:#fff
+}
+
+/* Щоб прогортувалось на 20 пікселів вище */
+#products {
+  scroll-margin-top: 20px;
+}
+/* 
+________________________________________________________ */
+
+@media(width<=920px){
+.product-section__grid{
+    grid-template-columns: repeat(2, 1fr);
+
+}
+}
+
+@media (width <= 400px) {
+    .product-section__grid {
+    grid-template-columns: repeat(2, 1fr); /* ← 2 колонки */
+    }
+}
+
+@media (width <= 400px) {
+    .product-section__btn{
+        display: flex;
+        flex-direction: column;
+    }
+    .view-all {
+    align-self: stretch;
+    text-align: center;
+    }
+}

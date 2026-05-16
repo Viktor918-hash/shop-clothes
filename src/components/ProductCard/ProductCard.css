@@ -1,0 +1,128 @@
+.product-card {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+}
+
+.product-card__container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card__image {
+    background-color: #f0f0f0; 
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 4/5;
+    width: 100%;
+    max-height: 400px;
+    position: relative;
+}
+
+.product-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-card__image img {
+    transform: scale(1.05);
+}
+
+.product-card__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card__text {
+    font-weight: 700;
+    font-size: clamp(14px, 2vw, 20px);
+    margin: 16px 0px 8px 0px;
+    padding: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* НОВИЙ БЛОК ДЛЯ ЦІН */
+.product-card__price-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+.product-card__price {
+    font-weight: 700;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+}
+
+/* СТАРА ЦІНА */
+.product-card__old-price {
+    font-weight: 700;
+    font-size: 22px;
+    color: #00000066;
+    text-decoration: line-through;
+    margin: 0;
+    padding: 0;
+}
+
+/* ЗНИЖКА */
+.product-card__discount {
+    padding: 4px 12px;
+    background: #FF33331A;
+    color: #FF3333;
+    border-radius: 62px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+/* ____________________________________________ */
+@media(width<=920px) {
+    .product-card__image {
+        max-height: 200px;
+        width: 100%;
+    }
+    
+    .product-card__price,
+    .product-card__old-price {
+        font-size: 18px;
+    }
+    
+    .product-card__discount {
+        font-size: 10px;
+        padding: 3px 10px;
+    }
+}
+
+@media(width<=480px) {
+    .product-card__price,
+    .product-card__old-price {
+        font-size: 16px;
+    }
+}
+
+
+/* ✅ text-decoration: none і color: inherit — щоб Link не мав підкреслення та синього кольору
+✅ transition: transform — плавна анімація при hover
+✅ .product-card:hover — картка піднімається
+✅ .product-card__price-wrapper — контейнер для ціни, старої ціни та знижки
+✅ .product-card__old-price — стара ціна з перекресленням
+✅ .product-card__discount — бейдж зі знижкою
+✅ Hover ефект для зображення — збільшується при наведенні */
