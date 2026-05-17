@@ -64,7 +64,7 @@ const CartPage = () => {
     if (discount) {
       setAppliedPromo({ code: promoCode.toUpperCase(), discount })
     } else {
-      alert('Invalid promo code')
+      // alert('Invalid promo code')
     }
   }
 
@@ -156,14 +156,14 @@ const CartPage = () => {
                     onClick={() => updateQuantity(index, item.quantity - 1)}
                     aria-label="Decrease quantity"
                   >
-                    <Minus size={16} />
+                    <Minus size={16} className='minus__button' />
                   </button>
                   <span>{item.quantity}</span>
                   <button 
                     onClick={() => updateQuantity(index, item.quantity + 1)}
                     aria-label="Increase quantity"
                   >
-                    <Plus size={16} />
+                    <Plus size={16} className='plus__button' />
                   </button>
                 </div>
 

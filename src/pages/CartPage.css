@@ -170,6 +170,10 @@ a.btn-shop{
   padding: 12px 20px;
 }
 
+.plus__button, .minus__button {
+  color: #000;
+}
+
 .cart-item__quantity button {
   background: none;
   border: none;
