@@ -116,6 +116,7 @@ input{
 
 /* Приховуємо мобільну кнопку на ВЕЛИКИХ ЕКРАНАХ */
 .search__button-mobile {
+    color: #000;
     display: none;
     background: transparent;
     border: none;

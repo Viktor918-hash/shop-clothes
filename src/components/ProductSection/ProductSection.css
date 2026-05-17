@@ -44,9 +44,11 @@ padding-inline: 0; /* ← скидає глобальний padding */
     margin-top: clamp(24px, 2.8vw, 36px)
 }
 
+
 .view-all{
     display: inline-block;
     background-color: #fff;
+    color:black;
     padding: 16px 76px;
     border-radius: 100px;
     border: 1px solid #f0f0f0;
