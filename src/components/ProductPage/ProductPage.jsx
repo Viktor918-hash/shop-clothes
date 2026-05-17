@@ -271,7 +271,7 @@ const ProductPage = () => {
                   aria-label="Decrease quantity"
                   disabled={isAdding} // ✅ Вимикаємо кнопки кількості під час додавання
                 >
-                  <Minus size={20} />
+                  <Minus size={20} className='minus__button' />
                 </button>
                 <span className='quantity__value'>{quantity}</span>
                 <button 
@@ -280,7 +280,7 @@ const ProductPage = () => {
                   aria-label="Increase quantity"
                   disabled={isAdding} // ✅ Вимикаємо кнопки кількості під час додавання
                 >
-                  <Plus size={20} />
+                  <Plus size={20} className='plus__button' />
                 </button>
               </div>
 

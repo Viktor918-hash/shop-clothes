@@ -299,6 +299,14 @@
   transition: transform 0.2s;
 }
 
+.minus__button {
+  color: #000;
+}
+
+.plus__button {
+  color: #000;
+}
+
 .quantity__button:hover {
   transform: scale(1.1);
 }
