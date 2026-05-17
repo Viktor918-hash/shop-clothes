@@ -39,4 +39,34 @@ img {
 }
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
+/* ✅ ПРИБИРАЄМО СИНЮ ОБВОДКУ З КНОПОК ТА INPUT */
+button,
+input,
+textarea,
+select {
+  	outline: none; /* Прибирає outline */
+  	-webkit-appearance: none; /* Прибирає iOS стилі */
+	-moz-appearance: none;
+  	appearance: none;
+  	border: none; /* Прибирає стандартні бордери */
+  	background: none; /* Прибирає стандартний фон */
+}
+
+/* ✅ ПРИБИРАЄМО СИНЮ ОБВОДКУ ПРИ ФОКУСІ */
+	button:focus,
+	input:focus,
+	textarea:focus,
+	select:focus,
+a:focus {
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+/* ✅ ПРИБИРАЄМО СИНЄ ВИДІЛЕННЯ З ПОСИЛАНЬ НА iOS */
+a {
+	text-decoration: none;
+	color: inherit;
+	-webkit-tap-highlight-color: transparent;
+}
+
 /*--------------------*/

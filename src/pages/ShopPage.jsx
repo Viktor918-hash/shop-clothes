@@ -110,7 +110,11 @@ const ShopPage = () => {
     filteredProducts = [...filteredProducts].sort((a, b) => b.price - a.price)
   } else if (sortBy === 'price-low') {
     filteredProducts = [...filteredProducts].sort((a, b) => a.price - b.price)
+  } else if (sortBy === null) {
+    filteredProducts = [...filteredProducts].sort((a, b) => a.id - b.id)
   }
+
+
 
   // ПАГІНАЦІЯ
   const totalPages = Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE)
@@ -143,7 +147,8 @@ const ShopPage = () => {
     if (sortBy === 'rating') return 'Most Popular'
     if (sortBy === 'price-high') return 'Price: High to Low'
     if (sortBy === 'price-low') return 'Price: Low to High'
-    return 'Most Popular'
+    if (sortBy === null) return 'All Products'
+    return 'Sort By'
   }
 
   const getBreadcrumb = () => {
@@ -249,6 +254,7 @@ const ShopPage = () => {
                   : (selectedStyle || selectedType
                       ? breadcrumbParts.join(' / ')
                       : 'All Products'))
+                    
               }
             </h1>
 
@@ -340,6 +346,7 @@ const ShopPage = () => {
                       { key: 'rating', label: 'Most Popular' },
                       { key: 'price-high', label: 'Price: High to Low' },
                       { key: 'price-low', label: 'Price: Low to High' },
+                      { key: null, label: 'All Products' }
                     ].map(opt => (
                       <div
                         key={opt.key}
