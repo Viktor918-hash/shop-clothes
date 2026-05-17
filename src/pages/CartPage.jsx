@@ -20,7 +20,11 @@ const CartPage = () => {
     // Слухаємо зміни в localStorage (якщо відкрито кілька вкладок)
     window.addEventListener('storage', loadCart)
     return () => window.removeEventListener('storage', loadCart)
-  }, [])
+  }, []) 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [id])
+  
 
   // ✅ НОВА ФУНКЦІЯ: Оновлення кошика + відправка події
   const updateCartAndNotify = (updatedCart) => {
